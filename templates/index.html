@@ -1,0 +1,119 @@
+<html>
+	<head>
+		{% load static %}
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
+
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+        <link href="{% static 'css/aos.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/landmain.css' %}" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<title>SpotLight</title>
+		<script defer src="{% static '/js/app.js' %}" ></script>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/aos.js' %}"></script>
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+        <script src="{% static 'js/scrollspy.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+	</head>
+<body >
+	<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'landing' %}">
+				<strong>SpotLight</strong>
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#hero"><i class="fas fa-microphone-alt"></i> Dashboard</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#contact"><i class="fas fa-file-contract"></i> Contact Us</a>
+					</li>
+
+
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+					</li>
+
+
+					<li class="nav-item" style="margin-right: 0;">
+						{% if user.is_authenticated %}
+						<p class="nav-link">Hello {{user.username}}</p>
+						{% endif %}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="mid" id="hero">
+		<br><br><br>
+			<div class="tp">
+				<p class="tle"> < SpotLight > </p>
+			</div>
+			<div class="mic" id="phone">
+				<button type="submit" class="btn" id="mp" onclick=toggleBtn()><i class="fas fa-microphone-alt fa-6x"></i></button>
+			</div>
+			<div id="speech">
+		
+			</div>
+			<p id="disp"></p>
+	</section>
+	
+
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-12">
+					<h5 class="text-white">
+						<i class="fas fa-map-marker-alt"></i>
+						Indian Institute of Information Technology Kottayam, Kerala
+					</h5>
+
+					<a href="mailto:queries.spotlight@gmail.com" class="custom-link mt-3 mb-5">
+						queries.spotlight@gmail.com
+					</a>
+
+					<p>Copyrights© Team Error-404</p>
+
+				</div>
+
+				<div class="col-lg-3 col-5 ms-auto" id="contact">
+					<ul class="social-icon" >
+						<li><a href="#" class="fab fa-facebook-square fa-2x"></a></li>
+
+						<li><a href="#" class="fab fa-twitter-square fa-2x"></a></li>
+
+						<li><a href="#" class="fab fa-whatsapp-square fa-2x"></a></li>
+
+						<li><a href="#" class="fab fa-youtube-square fa-2x"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</section>
+	</footer>
+
+</body>
+</html>

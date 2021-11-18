@@ -1,0 +1,33 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styley.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <form action="upload" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="drag-area">
+      <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+      <header>Drag & Drop to Upload File</header>
+      <span>OR</span>
+      <button type="button" class="browse">Browse File</button>
+      <input type="file" name='fupload' hidden>
+    </div>
+    <div class="file">
+      <p id="fname" style="color: aliceblue;">No File Choosen</p>
+      <button type="submit" class="upload">Upload</button>
+    </div>
+  </form>
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

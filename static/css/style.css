@@ -1,0 +1,120 @@
+@font-face {
+    font-family: imfell;
+    src: url(IMFellEnglishSC-Regular.ttf);
+}
+@font-face {
+    font-family: 'Liche';
+    src: url("../fonts/liche/Fresh Lychee.ttf");
+    }
+.mid{
+    background:url(/static/images/back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+input{
+    background-color: white;
+    width: 50%;
+    height: 80px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0px !important;
+    margin: 30px 10px !important;
+    font-size: 20px !important;
+}
+.tp{
+    display: flex;
+    flex-direction: column;
+    justify-content:center !important;
+    align-items: center;
+}
+.tle{
+    color: rgb(3, 233, 250) !important;
+    user-select: none;
+    font-size: 120px !important;
+    font-family: Liche !important;
+}
+.btn{
+    height: 150px;
+    width:150px;
+    border-radius: 100px !important;
+    background-color: rgb(144, 174, 201);
+    border: 0px solid;
+    box-shadow: 5px 10px 8px #888888;
+}
+.btn:hover{
+    color:rgb(104, 90, 128) !important;
+}
+.mic{
+    margin: 0px auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #a83905;
+    }
+    10% {
+      box-shadow: 0 0 10px #e88719;
+    }
+    20% {
+      box-shadow: 0 0 15px #9da805;
+    }
+    30% {
+    box-shadow: 0 0 20px #39a805;
+    }
+    40% {
+    box-shadow: 0 0 25px #19e83c;
+    }
+    50% {
+    box-shadow: 0 0 30px #05a8a8;
+    }
+    60% {
+    box-shadow: 0 0 25px #0551a8;
+    }
+    70% {
+    box-shadow: 0 0 20px #7319e8;
+    }
+    80% {
+    box-shadow: 0 0 15px #9a05a8;
+    }
+    90% {
+    box-shadow: 0 0 10px #a80572;
+    }
+    100% {
+    box-shadow: 0 0 5px #e81919;
+    }
+  }
+.anim:focus{
+    animation: glowing 3s infinite;
+}
+.stop{
+    height:80px;
+    width:100px;
+    border-radius: 40px !important;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#disp{
+    text-align: center;
+    border-radius: 10px; 
+    background-color: #fafcfb48; 
+    max-width: 50%;
+    margin: 20px auto;
+    color: aliceblue;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
