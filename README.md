@@ -1,8 +1,7 @@
 # SpotLight
-A Voice Assistant Website - Bravo
+A Voice Assistant Web Application - Bravo
 
-Description : This is a voice controlled virtual assistant made with React, Django, JavaScript. This assistant is named Bravo, it understands users commands given 
-through voice and performs the appropriate action.
+Description : This is a voice controlled virtual assistant made with React, Django, JavaScript. This assistant is named Bravo, it understands users commands given through voice and performs the appropriate action.
 
 Actions that can be performed by Bravo :
 1. Tell me about "_any_" movie, tells a brief description about the movie.
